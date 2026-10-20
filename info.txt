@@ -1,0 +1,4 @@
+docker compose -f compose.dev.yaml down (-v pour retirer le volume aussi)
+docker compose -f compose.dev.yaml up --build
+
+docker compose up --build -d
