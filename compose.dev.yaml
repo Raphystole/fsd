@@ -1,7 +1,7 @@
 services:
   frontend:
     build:
-      context: .
+      context: ./frontend
       dockerfile: Dockerfile.dev
 
     container_name: fsd-maintenance-dev
@@ -10,8 +10,13 @@ services:
       - "5173:5173"
 
     volumes:
-      - .:/app
+      - ./frontend:/app
       - node_modules:/app/node_modules
+
 
 volumes:
   node_modules:
+  data:
+
+networks:
+  internal:
